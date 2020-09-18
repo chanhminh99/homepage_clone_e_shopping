@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./object_grid.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .container {
+            /* background-color: orange; */
+            text-align: center;
+        }
+
+        .course-item {
+            background-color: orange;
+            height: 260px;
+        }
+
+        h1 {
+            color: #fff;
+            line-height: 260px;
+            margin: 0;
+        }
+/* 
+        h1 {
+            padding: 100px 0;
+            margin: 0;
+            font-size: 100px;
+            color: #fff;
+        } */
+
+        .col {
+            text-align: center;
+            background-clip: border-box;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width:1023px)
+        {
+            .course-item {
+                margin-top: 16px;
+            }
+        }
+
+        .category {
+            background-color: green;
+            height: 260px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid wide">
+        <div class="row">
+            <div class="col l-3 m-0 c-0">
+                <div class="category">
+                    <ul>
+                        <li>Java Script</li>
+                        <li>Html & Css</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col l-9 m-12 c-12">
+                <div class="row">
+                    <!-- 3 Courses -> 12/3 = 4 -->
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>Courses 1</h1>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>Courses 2</h1>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>Courses 3</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,262 @@
+:root {
+    --primary-color:rgb(238,75,43);
+    --white-color: #fff;
+    --black-color:#000;
+    --text-color: #333;
+    --border-color:#dbdbdb;
+    --star-gold-color:#FFCE3E;
+    
+
+    --navbar-height:34px;
+    --header-height:120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height:46px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif ;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test */
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+
+
+
+/* Animation dạng frame ( chạy giống phim ) */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-form));
+    }
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35);
+}
+
+.modal__body {
+    --growth-form:0.7;
+    --growth-to:1;
+    margin: auto;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+
+/* Button style */
+.btn {
+    min-width: 119px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+    background-color: var(--white-color);
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disabled {
+    cursor: default;
+    background-color: #c3c3c3;
+    color: #949494;
+    
+}
+
+
+/* Selection input */
+
+.select-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 34px;
+    background-color: var(--white-color);
+    padding: 8px 8px;
+    border-radius: 2px;
+}
+
+.select-input:hover .select-input-option {
+    display: block;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.select-input__icon {
+    color:#5d5d5d;
+    font-size: 1.2rem;
+}
+
+.select-input-option {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: calc(100% + 1.5px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 0 3px #ccc;
+    padding: 10px 0px;
+    margin: 0;
+    display: none;
+    z-index: 1;
+}
+
+.select-input::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 30px;
+    height: 10px;
+    right: 0;
+    width: 100%;
+}
+
+.select-input-option-item {
+    list-style: none;
+    padding: 4px 15px;
+}
+
+.select-input-option-label {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.select-input-option-label:hover {
+    color: var(--primary-color);
+}
+
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.pagination-item {
+    margin: 0 14px;
+}
+
+.pagination-item__link {
+    --height:30px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #b9b9b9;
+    line-height: var(--height);
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.pagination-item__icon {
+    color: #a5a5a5;
+    font-size: 1.8rem;
+}
+
+.pagination-item--active {
+    color: var(--white-color);
+    background-color: #ee4d2d;
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #f05d40;
+}
+
+
+
+
+
